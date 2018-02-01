@@ -1,12 +1,12 @@
-
-type TBlockBase<T> = {
+type TBlock<T> = {
     index: number
     previousHash: string
-    timestamp: string
+    timestamp: number
     data: T
+    hash: string, nonce: number,
+    difficulty: number
 }
 
-type TBlock<T> = TBlockBase<T> & { hash: string }
 type TBlockChain<T> = TBlock<T>[]
 
 interface TBlockChainGenerator<T> {
@@ -14,4 +14,5 @@ interface TBlockChainGenerator<T> {
     latest: (chain: TBlockChain<T>) => TBlock<T>
     add: (chain: TBlockChain<T>, block: TBlock<T>) => TBlockChain<T>
     validate: (chain: TBlockChain<T>) => boolean
+    proofOfWork: (block: TBlock<T>) => TBlock<T>
 }
