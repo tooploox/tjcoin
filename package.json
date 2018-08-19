@@ -1,41 +1,45 @@
 {
-    "name": "tjcoin",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "jest"
+  "name": "tjcoin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tooploox/tjcoin.git"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^3.1.43",
+    "@types/jest": "^23.3.1",
+    "jest": "^23.5.0",
+    "ts-jest": "^23.1.3",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
     },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "crypto-js": "^3.1.9-1"
+    "testMatch": [
+      "<rootDir>/src/**/*.spec.(ts|js)"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "moduleNameMapper": {
+      "@/(.*)": "<rootDir>/src/$1"
     },
-    "devDependencies": {
-        "@types/crypto-js": "^3.1.38",
-        "@types/jest": "^22.1.0",
-        "jest": "^22.1.4",
-        "ts-jest": "^22.0.2",
-        "tslint": "^5.9.1",
-        "typescript": "^2.7.1"
-    },
-    "jest": {
-        "transform": {
-            ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-        },
-        "testMatch": [
-            "<rootDir>/src/**/*.spec.(ts|js)"
-        ],
-        "moduleFileExtensions": [
-            "ts",
-            "js"
-        ],
-        "moduleNameMapper": {
-            "@/(.*)": "<rootDir>/src/$1"
-        },
-        "moduleDirectories": [
-            "node_modules",
-            "./src"
-        ]
-    }
+    "moduleDirectories": [
+      "node_modules",
+      "./src"
+    ]
+  }
 }
