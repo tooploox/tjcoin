@@ -3,7 +3,8 @@ type TBlock<T> = {
     previousHash: string
     timestamp: number
     data: T
-    hash: string, nonce: number,
+    hash: string
+    nonce: number
     difficulty: number
 }
 
